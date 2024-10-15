@@ -77,6 +77,28 @@
             margin-left: 5px;
         }
 
+        /* OR divider */
+        .or-divider {
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: grey;
+            display: flex;
+            align-items: center;
+        }
+        .or-divider:before,
+        .or-divider:after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #ccc;
+        }
+        .or-divider:before {
+            margin-right: 10px;
+        }
+        .or-divider:after {
+            margin-left: 10px;
+        }
+
         /* Style for the continue buttons */
         .social-login-container {
             margin-top: 20px;
@@ -104,7 +126,7 @@
     <h1>Welcome back</h1>
     <h2>Login to viva.com</h2>
     <form action="/login" method="post">
-        <input type="email" name="email" placeholder="Email" required>
+        <input type="email" name="email" placeholder="Email or Mobile Number" required>
         <input type="password" name="password" placeholder="Password" required>
 
         <!-- Row with Remember me and Forget password -->
@@ -118,6 +140,9 @@
 
         <button type="submit">Login</button>
     </form>
+
+    <!-- OR divider -->
+    <div class="or-divider">OR</div>
 
     <!-- Social login buttons -->
     <div class="social-login-container">
