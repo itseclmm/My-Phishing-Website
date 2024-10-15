@@ -53,26 +53,27 @@
         .login-container button:hover {
             background-color: #333;
         }
-        .login-container .forgot-password {
-            display: block;
-            margin-top: 10px;
-            color: blue;
+        /* Styling for the row with Remember me and Forget password */
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 0.9em;
-            text-decoration: none;
-            text-align: right;
+            margin: 10px 0;
         }
-        .login-container .forgot-password:hover {
-            text-decoration: underline;
-        }
-        /* Styling for the Remember me checkbox */
-        .remember-me-container {
+        .login-options .remember-me-container {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            margin: -10px 0 10px 0;
         }
-        .remember-me-container input[type="checkbox"] {
-            margin-right: 10px;
+        .login-options .forgot-password {
+            color: blue;
+            text-decoration: none;
+        }
+        .login-options .forgot-password:hover {
+            text-decoration: underline;
+        }
+        .login-options label {
+            margin-left: 5px;
         }
 </style>
 </head>
@@ -86,13 +87,15 @@
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
 
-        <!-- Remember me checkbox -->
-        <div class="remember-me-container">
-            <input type="checkbox" id="rememberMe" name="rememberMe">
-            <label for="rememberMe">Remember me</label>
+        <!-- Row with Remember me and Forget password -->
+        <div class="login-options">
+            <div class="remember-me-container">
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <label for="rememberMe">Remember me</label>
+            </div>
+            <a href="#" class="forgot-password">Forget password?</a>
         </div>
 
-        <a href="#" class="forgot-password">Forget password?</a>
         <button type="submit">Login</button>
     </form>
 </div>
