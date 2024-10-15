@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .login-container img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .login-container h1 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: black;
+            font-weight: bold;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 1em;
+            color: black;
+            font-weight: normal;
+        }
+        .login-container input[type="email"],
+        .login-container input[type="password"],
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container button {
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #333;
+        }
+        .login-container .forgot-password {
+            display: block;
+            margin-top: 10px;
+            color: blue;
+            font-size: 0.9em;
+            text-decoration: none;
+            text-align: right;
+        }
+        .login-container .forgot-password:hover {
+            text-decoration: underline;
+        }
+</style>
+</head>
+<body>
+<div class="login-container">
+<img src="
+https://www.vivawallet.com/images/logo.png"
+alt="Viva Wallet Logo">
+<h1>Welcome back</h1>
+<h2>Login to viva.com</h2>
+<form action="/login" method="post">
+<input type="email" name="email" placeholder="Email" required>
+<input type="password" name="password" placeholder="Password" required>
+<a href="#" class="forgot-password">Forget password?</a>
+<button type="submit">Login</button>
+</form>
+</div>
+</body>
+</html>
